@@ -64,33 +64,33 @@ record of Histogram and Scaterplot:
 1. adding code 'from pandas import Series, DataFrame' to make DataFrame function work
 2. using DataFrame to build two new series as 'current fleet' and 'proposed fleet'
 
-Index(['Current fleet', 'New Fleet'], dtype='object')
-Measures of central tendency on current fleet: \n
-Mean: 16.025316
-Median: 15.000000
-Measurements of dispersion on current fleet:
-Var: 17.391764
-std: 4.170343
-MAD: 2.000000
-histogram:      ![logo](./current fleet histogram.png?raw=true)
-scatterplot:    ![logo](./current fleet plot.png?raw=true)
-
-Measures of central tendency on proposed fleet:
-Mean: 30.481013
-Median: 32.000000
-Measurements of dispersion on proposed fleet:
-Var: 36.831918
-std: 6.068931
-MAD: 4.000000
-histogram:      ![logo](./proposed fleet histogram.png?raw=true)
-scatterplot:    ![logo](./proposed fleet plot.png?raw=true)
-
-
----------------------------------------------------------------------------------
-record of Standard deviation comparison via the boostrap:
-
-
-current fleet: ![logo](./current fleet bootstrap_confidence.png?raw=true)
-proposed fleet: ![logo](./proposed fleet bootstrap_confidence.png?raw=true)
-
-proposed fleet is more stable than current fleet.
+Index(['Current fleet', 'New Fleet'], dtype='object')  
+Measures of central tendency on current fleet:   
+Mean: 16.025316  
+Median: 15.000000  
+Measurements of dispersion on current fleet:  
+Var: 17.391764  
+std: 4.170343  
+MAD: 2.000000  
+histogram:      ![logo](./current fleet histogram.png?raw=true)  
+scatterplot:    ![logo](./current fleet plot.png?raw=true)  
+  
+Measures of central tendency on proposed fleet:  
+Mean: 30.481013  
+Median: 32.000000  
+Measurements of dispersion on proposed fleet:  
+Var: 36.831918  
+std: 6.068931  
+MAD: 4.000000  
+histogram:      ![logo](./proposed fleet histogram.png?raw=true)  
+scatterplot:    ![logo](./proposed fleet plot.png?raw=true)  
+  
+  
+---------------------------------------------------------------------------------  
+record of Standard deviation comparison via the boostrap:  
+  
+  
+current fleet: ![logo](./current fleet bootstrap_confidence.png?raw=true)  
+proposed fleet: ![logo](./proposed fleet bootstrap_confidence.png?raw=true)  
+  
+proposed fleet is more stable than current fleet.  
