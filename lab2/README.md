@@ -64,42 +64,41 @@ Use the example code for the bootstrap provided in ``bootstrap.py'' to do the fo
 1. adding code 'from pandas import Series, DataFrame' to make DataFrame function work
 2. using DataFrame to build two new series as 'current fleet' and 'proposed fleet'
 
-Index(['Current fleet', 'New Fleet'], dtype='object')  
-Measures of central tendency on current fleet:   
-Mean: 16.025316  
-Median: 15.000000  
-Measurements of dispersion on current fleet:  
-Var: 17.391764  
-std: 4.170343  
-MAD: 2.000000  
-histogram:  
+* Index(['Current fleet', 'New Fleet'], dtype='object')  
+* Measures of central tendency on current fleet:   
+	* Mean: 16.025316  
+	* Median: 15.000000  
+* Measurements of dispersion on current fleet:  
+	* Var: 17.391764  
+	* std: 4.170343  
+	* MAD: 2.000000  
+* histogram:  
 ![logo](./current_fleet_histogram.png?raw=true)  
 
-scatterplot:  
+* scatterplot:  
 ![logo](./current_fleet_plot.png?raw=true)  
   
-Measures of central tendency on proposed fleet:  
-Mean: 30.481013  
-Median: 32.000000  
-Measurements of dispersion on proposed fleet:  
-Var: 36.831918  
-std: 6.068931  
-MAD: 4.000000  
-histogram:  
+* Measures of central tendency on proposed fleet:  
+	* Mean: 30.481013  
+	* Median: 32.000000  
+* Measurements of dispersion on proposed fleet:  
+	* Var: 36.831918  
+	* std: 6.068931  
+	* MAD: 4.000000  
+* histogram:  
 ![logo](./proposed_fleet_histogram.png?raw=true)  
   
-scatterplot:  
+* scatterplot:  
 ![logo](./proposed_fleet_plot.png?raw=true)  
 
   
 
 ## record of Standard deviation comparison via the boostrap:  
-  
-  
-current fleet:  
+    
+* current fleet:  
 ![logo](./current_fleet_bootstrap_confidence.png?raw=true)  
   
-proposed fleet:  
+* proposed fleet:  
 ![logo](./proposed_fleet_bootstrap_confidence.png?raw=true)  
 
   
