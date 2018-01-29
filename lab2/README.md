@@ -100,17 +100,10 @@ Use the example code for the bootstrap provided in ``bootstrap.py'' to do the fo
 * current fleet:  
 ![logo](./current_fleet_bootstrap_confidence.png?raw=true)  
   
-<<<<<<< HEAD
   
-current fleet:
-![logo](./current_fleet_bootstrap_confidence.png?raw=true)
-
-proposed fleet:
-![logo](./proposed_fleet_bootstrap_confidence.png?raw=true)
-=======
 * proposed fleet:  
 ![logo](./proposed_fleet_bootstrap_confidence.png?raw=true)  
->>>>>>> 4a02b067dea0a38d37fd14aad39a528c56af79fd
+
 
 The result of bootstrapping is similar to the original data. This is a credible set of data.  
 proposed fleet is more stable than current fleet.  
