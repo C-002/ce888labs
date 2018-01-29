@@ -65,7 +65,7 @@ record of Histogram and Scaterplot:
 2. using DataFrame to build two new series as 'current fleet' and 'proposed fleet'
 
 Index(['Current fleet', 'New Fleet'], dtype='object')
-Measures of central tendency on current fleet:
+Measures of central tendency on current fleet: \n
 Mean: 16.025316
 Median: 15.000000
 Measurements of dispersion on current fleet:
