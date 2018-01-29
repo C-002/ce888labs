@@ -59,7 +59,7 @@ Use the example code for the bootstrap provided in ``bootstrap.py'' to do the fo
       * ``git push origin master``
 
 
-##record of Histogram and Scaterplot:
+## record of Histogram and Scaterplot:
 
 1. adding code 'from pandas import Series, DataFrame' to make DataFrame function work
 2. using DataFrame to build two new series as 'current fleet' and 'proposed fleet'
@@ -87,7 +87,7 @@ scatterplot:    ![logo](./proposed_fleet_plot.png?raw=true)
   
   
 
-##record of Standard deviation comparison via the boostrap:
+## record of Standard deviation comparison via the boostrap:
   
   
 current fleet: ![logo](./current_fleet_bootstrap_confidence.png?raw=true)
