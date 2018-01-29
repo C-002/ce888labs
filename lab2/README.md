@@ -72,8 +72,11 @@ Measurements of dispersion on current fleet:
 Var: 17.391764  
 std: 4.170343  
 MAD: 2.000000  
-histogram:      ![logo](./current_fleet_histogram.png?raw=true)
-scatterplot:    ![logo](./current_fleet_plot.png?raw=true)
+histogram:  
+![logo](./current_fleet_histogram.png?raw=true)  
+
+scatterplot:  
+![logo](./current_fleet_plot.png?raw=true)  
   
 Measures of central tendency on proposed fleet:  
 Mean: 30.481013  
@@ -82,22 +85,22 @@ Measurements of dispersion on proposed fleet:
 Var: 36.831918  
 std: 6.068931  
 MAD: 4.000000  
-histogram:
-![logo](./proposed_fleet_histogram.png?raw=true)
-
-scatterplot:
-![logo](./proposed_fleet_plot.png?raw=true)
+histogram:  
+![logo](./proposed_fleet_histogram.png?raw=true)  
+  
+scatterplot:  
+![logo](./proposed_fleet_plot.png?raw=true)  
 
   
 
-## record of Standard deviation comparison via the boostrap:
+## record of Standard deviation comparison via the boostrap:  
   
   
-current fleet:
-![logo](./current_fleet_bootstrap_confidence.png?raw=true)
-
+current fleet:  
+![logo](./current_fleet_bootstrap_confidence.png?raw=true)  
+  
 proposed fleet:  
-![logo](./proposed_fleet_bootstrap_confidence.png?raw=true)
+![logo](./proposed_fleet_bootstrap_confidence.png?raw=true)  
 
   
 proposed fleet is more stable than current fleet.  
