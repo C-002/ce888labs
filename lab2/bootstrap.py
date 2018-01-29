@@ -53,8 +53,8 @@ if __name__ == "__main__":
 	sns_plot.axes[0,0].set_ylim(0,)
 	sns_plot.axes[0,0].set_xlim(0,100000)
 
-	sns_plot.savefig("proposed fleet bootstrap_confidence.png",bbox_inches='tight')
-	sns_plot.savefig("proposed fleet bootstrap_confidence.pdf",bbox_inches='tight')
+	sns_plot.savefig("proposed_fleet_bootstrap_confidence.png",bbox_inches='tight')
+	sns_plot.savefig("proposed_fleet_bootstrap_confidence.pdf",bbox_inches='tight')
 
 	
 	

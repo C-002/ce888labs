@@ -41,8 +41,8 @@ if __name__ == "__main__":
     sns_plot.axes[0, 0].set_ylim(0, )
     sns_plot.axes[0, 0].set_xlim(0, )
 
-    sns_plot.savefig("current fleet plot.png", bbox_inches='tight')
-    sns_plot.savefig("current fleet plot.pdf", bbox_inches='tight')
+    sns_plot.savefig("current_fleet_plot.png", bbox_inches='tight')
+    sns_plot.savefig("current_fleet_plot.pdf", bbox_inches='tight')
 
     print('\nMeasures of central tendency on current fleet:')
     print(("Mean: %f") % (np.mean(dataset1)))
@@ -59,8 +59,8 @@ if __name__ == "__main__":
     axes2.set_xlabel(plotdata1.columns[0])
     axes2.set_ylabel(plotdata1.columns[1])
 
-    sns_plot2.savefig("current fleet histogram.png", bbox_inches='tight')
-    sns_plot2.savefig("current fleet histogram.pdf", bbox_inches='tight')
+    sns_plot2.savefig("current_fleet_histogram.png", bbox_inches='tight')
+    sns_plot2.savefig("current_fleet_histogram.pdf", bbox_inches='tight')
 
 
 ####proposed sleet
@@ -73,8 +73,8 @@ if __name__ == "__main__":
     sns_plot3.axes[0, 0].set_ylim(0, )
     sns_plot3.axes[0, 0].set_xlim(0, )
 
-    sns_plot3.savefig("proposed fleet plot.png", bbox_inches='tight')
-    sns_plot3.savefig("proposed fleet plot.pdf", bbox_inches='tight')
+    sns_plot3.savefig("proposed_fleet_plot.png", bbox_inches='tight')
+    sns_plot3.savefig("proposed_fleet_plot.pdf", bbox_inches='tight')
 
     print('\nMeasures of central tendency on proposed fleet:')
     print(("Mean: %f") % (np.mean(dataset2)))
@@ -91,7 +91,7 @@ if __name__ == "__main__":
     axes4.set_xlabel(plotdata2.columns[0])
     axes4.set_ylabel(plotdata2.columns[1])
 
-    sns_plot4.savefig("proposed fleet histogram.png", bbox_inches='tight')
-    sns_plot4.savefig("proposed fleet histogram.pdf", bbox_inches='tight')
+    sns_plot4.savefig("proposed_fleet_histogram.png", bbox_inches='tight')
+    sns_plot4.savefig("proposed_fleet_histogram.pdf", bbox_inches='tight')
 
 
