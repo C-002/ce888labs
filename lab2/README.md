@@ -96,7 +96,7 @@ scatterplot:
 current fleet:
 ![logo](./current_fleet_bootstrap_confidence.png?raw=true)
 
-proposed fleet:  
+proposed fleet:
 ![logo](./proposed_fleet_bootstrap_confidence.png?raw=true)
 
   

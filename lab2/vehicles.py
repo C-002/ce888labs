@@ -9,7 +9,7 @@ import random
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-import numpy as np
+import numpy as np  
 
 
 # def permutation(statistic, error):
