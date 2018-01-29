@@ -69,27 +69,28 @@ Use the example code for the bootstrap provided in ``bootstrap.py'' to do the fo
 	* Measures of central tendency on current fleet:   
 		* Mean: 16.025316  
 		* Median: 15.000000  
-* Measurements of dispersion on current fleet:  
-	* Var: 17.391764  
-	* std: 4.170343  
-	* MAD: 2.000000  
-* histogram:  
+	* Measurements of dispersion on current fleet:  
+		* Var: 17.391764  
+		* std: 4.170343  
+		* MAD: 2.000000  
+	* histogram:  
 ![logo](./current_fleet_histogram.png?raw=true)  
 
-* scatterplot:  
+	* scatterplot:  
 ![logo](./current_fleet_plot.png?raw=true)  
-  
-* Measures of central tendency on proposed fleet:  
-	* Mean: 30.481013  
-	* Median: 32.000000  
-* Measurements of dispersion on proposed fleet:  
-	* Var: 36.831918  
-	* std: 6.068931  
-	* MAD: 4.000000  
-* histogram:  
+
+* proposed fleet:  
+	* Measures of central tendency on proposed fleet:  
+		* Mean: 30.481013  
+		* Median: 32.000000  
+	* Measurements of dispersion on proposed fleet:  
+		* Var: 36.831918  
+		* std: 6.068931  
+		* MAD: 4.000000  
+	* histogram:  
 ![logo](./proposed_fleet_histogram.png?raw=true)  
   
-* scatterplot:  
+	* scatterplot:  
 ![logo](./proposed_fleet_plot.png?raw=true)  
 
   
