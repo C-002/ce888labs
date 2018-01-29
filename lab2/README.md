@@ -65,9 +65,10 @@ Use the example code for the bootstrap provided in ``bootstrap.py'' to do the fo
 2. using DataFrame to build two new series as 'current fleet' and 'proposed fleet'
 
 * Index(['Current fleet', 'New Fleet'], dtype='object')  
-* Measures of central tendency on current fleet:   
-	* Mean: 16.025316  
-	* Median: 15.000000  
+* current fleet:  
+	* Measures of central tendency on current fleet:   
+		* Mean: 16.025316  
+		* Median: 15.000000  
 * Measurements of dispersion on current fleet:  
 	* Var: 17.391764  
 	* std: 4.170343  
