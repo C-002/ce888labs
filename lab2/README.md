@@ -103,5 +103,5 @@ Use the example code for the bootstrap provided in ``bootstrap.py'' to do the fo
 * proposed fleet:  
 ![logo](./proposed_fleet_bootstrap_confidence.png?raw=true)  
 
-  
+The result of bootstrapping is similar to the original data. This is a credible set of data.  
 proposed fleet is more stable than current fleet.  
