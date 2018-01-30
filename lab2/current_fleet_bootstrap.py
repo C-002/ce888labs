@@ -32,18 +32,18 @@ if __name__ == "__main__":
 	#print df.columns
 
 	data1 = df.dropna()
-	data = data1.values.T[1]
+	data = data1.values.T[0]
 	print(data)
 	#data = df.values.T[1]
 	boots = []
 	for i in range(100,100000,1000):
-		boot = boostrap(np.mean, i, data)
+		boot = boostrap(np.std, i, data)
 		boots.append([i,boot[0], "mean"])
 		boots.append([i,boot[1], "lower"])
 		boots.append([i,boot[2], "upper"])
 
 
-
+	#print(boots[-3])
 	df_boot = pd.DataFrame(boots,  columns=['Boostrap Iterations','Mean',"Value"])
 	sns_plot = sns.lmplot(df_boot.columns[0],df_boot.columns[1], data=df_boot, fit_reg=False,  hue="Value")
 
@@ -53,13 +53,13 @@ if __name__ == "__main__":
 	sns_plot.axes[0,0].set_ylim(0,)
 	sns_plot.axes[0,0].set_xlim(0,100000)
 
-	sns_plot.savefig("proposed_fleet_bootstrap_confidence.png",bbox_inches='tight')
-	sns_plot.savefig("proposed_fleet_bootstrap_confidence.pdf",bbox_inches='tight')
+	sns_plot.savefig("current_fleet_bootstrap_confidence.png",bbox_inches='tight')
+	sns_plot.savefig("current_fleet_bootstrap_confidence.pdf",bbox_inches='tight')
 
 	
 	
-	print ("Mean: %f")%(np.mean(data))
-	print ("Var: %f")%(np.var(data))
+	#print ("Mean: %f")%(np.mean(data))
+	#print ("Var: %f")%(np.var(data))
 	
 
 

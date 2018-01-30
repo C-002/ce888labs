@@ -37,7 +37,7 @@ if __name__ == "__main__":
 	#data = df.values.T[1]
 	boots = []
 	for i in range(100,100000,1000):
-		boot = boostrap(np.mean, i, data)
+		boot = boostrap(np.std, i, data)
 		boots.append([i,boot[0], "mean"])
 		boots.append([i,boot[1], "lower"])
 		boots.append([i,boot[2], "upper"])
@@ -58,8 +58,8 @@ if __name__ == "__main__":
 
 	
 	
-	print ("Mean: %f")%(np.mean(data))
-	print ("Var: %f")%(np.var(data))
+	#print ("Mean: %f")%(np.mean(data))
+	#print ("Var: %f")%(np.var(data))
 	
 
 
