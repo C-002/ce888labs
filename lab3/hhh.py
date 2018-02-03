@@ -1,4 +1,3 @@
-
 import matplotlib
 import numpy as np
 #import matplotlib.pyplot as plt
@@ -51,4 +50,4 @@ del df_copy["duration"]
 print(df_copy)
 
 xx=df_copy["y_yes"]
-sns.distplot(xx, kde=True, rug=True)
+sns.distplot(xx, bins=20, kde=True, rug=True)
