@@ -21,9 +21,17 @@
 
 ## Log  
 
-### single thread  
+### single thread   
+- n_features = 5, 6: mse > 500  
+  
 - n_features = 7 with iterations = 100000 (first 100 line):  
     * mse = 158.55902514891935  
     * predictions : ![csv](./predictions_7f_10.csv?raw=true)  
     * latent_user_preferences : ![csv](./latent_user_preferences_7f_10.csv?raw=true)  
     * latent_item_features : ![csv](./latent_item_features_7f_10.csv?raw=true)  
+    
+- n_features = 10 with iterations = 85000 (first 100 line):[abandon]  
+    * mse >2k
+    * predictions : ![csv](./predictions_10f_10.csv?raw=true)  
+    * latent_user_preferences : ![csv](./latent_user_preferences_f_10.csv?raw=true)  
+    * latent_item_features : ![csv](./latent_item_features_10f_10.csv?raw=true)  
