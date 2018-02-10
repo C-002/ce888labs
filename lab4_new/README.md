@@ -24,6 +24,6 @@
 ### single thread  
 - n_features = 7 with iterations = 100000 (first 100 line):  
     * mse = 158.55902514891935  
-    * predictions : ![logo](./predictions_7f_10.csv?raw=true)  
-    * latent_user_preferences : ![logo](./latent_user_preferences_7f_10.csv?raw=true)  
-    * latent_item_features : ![logo](./latent_item_features_7f_10.csv?raw=true)  
+    * predictions : ![csv](./predictions_7f_10.csv?raw=true)  
+    * latent_user_preferences : ![csv](./latent_user_preferences_7f_10.csv?raw=true)  
+    * latent_item_features : ![csv](./latent_item_features_7f_10.csv?raw=true)  
