@@ -22,7 +22,7 @@
 ## Log  
 
 ### single thread   
-- n_features = 5, 6: mse > 500  
+- n_features = 5, 6 with iterations = 100000: mse > 500  
   
 - n_features = 7 with iterations = 100000 (first 100 line):  
     * mse = 158.55902514891935  
@@ -35,3 +35,19 @@
     * predictions : ![csv](./predictions_10f_10.csv?raw=true)  
     * latent_user_preferences : ![csv](./latent_user_preferences_f_10.csv?raw=true)  
     * latent_item_features : ![csv](./latent_item_features_10f_10.csv?raw=true)  
+
+- Change at 13/02/2018
+
+        mse = (np.array(error) ** 2).mean()  
+        err_mse = mse - err_mse_log  
+        if (err_mse>0):  
+            print(mse, err_mse, err_mse_log)  
+            break  
+        err_mse_log = mse  
+       
+- Delete first column of data  
+    
+        #these are the usernames!  
+        del data[data.columns[0]]  
+        
+
