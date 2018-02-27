@@ -18,15 +18,16 @@ to plot the confidence intervals for the silhouette score
 ## Log
 
 * extract bz2  
-  **To uncompress a bzip2 file:
-      
-      bzip2 -d filename.bz2  
-  **If you want to extract it and keep the original, run this command:  
-              
-      bzip2 -dk filename.bz2  
-      
+  - To uncompress a bzip2 file:
+	```
+	bzip2 -d filename.bz2  
+	```  
+  - If you want to extract it and keep the original, run this command:  
+  	```
+	bzip2 -dk filename.bz2  
+	```  
 * 27 Feb Alter  
 	```
 	n_clusters = 3
 	```
-When the number of clusters is 3, the best result is available.  
+	When the number of clusters is 3, the best result is available.  
