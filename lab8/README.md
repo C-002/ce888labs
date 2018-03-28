@@ -4,9 +4,12 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
 
 ## Lab Exercises Log 
 
-- [x] run ``python imdb.py`` and note somewhere the test accuracy score
-    
-    ![logo](./imdb_py_result.png?raw=true)  
+- [x] run ``python imdb.py`` and note somewhere the test accuracy score  
+	Test score: 0.6878998550915718  
+	Test accuracy: 0.8366  
+    ![logo](./imdb_py_log.html?raw=true)  
+      
+      
 - [x] Modify the code to add one more layer of 64 ``relu`` units after the embedding layer record the score (i.e. add a dense followed by an "activation" layer)
 	```
 	x = inputs
@@ -16,7 +19,36 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
 	x = Dropout(0.25)(x)
 	x = Dense(1)(x)
 	predictions = Activation("sigmoid")(x)
+	model = Model(input=inputs, output=predictions)
+	model.compile(loss='mse',
+              optimizer='adam',
+              metrics=['accuracy'])
 	```
+	```
+	_________________________________________________________________
+	Layer (type)                 Output Shape              Param #   
+	=================================================================
+	input_3 (InputLayer)         (None, 80)                0         
+	_________________________________________________________________
+	embedding_25 (Embedding)     (None, 80, 128)           2560000   
+	_________________________________________________________________
+	flatten_18 (Flatten)         (None, 10240)             0         
+	_________________________________________________________________
+	dense_55 (Dense)             (None, 64)                655424    
+	_________________________________________________________________
+	dropout_28 (Dropout)         (None, 64)                0         
+	_________________________________________________________________
+	dense_56 (Dense)             (None, 1)                 65        
+	_________________________________________________________________
+	activation_6 (Activation)    (None, 1)                 0         
+	=================================================================
+	Total params: 3,215,489
+	Trainable params: 3,215,489
+	Non-trainable params: 0
+	```  
+	Test score: 0.18518264630556105  
+	Test accuracy: 0.79772
+	  
 - [x] Modify the code and add a dropout layer after the relu layer
 - [x] Remove the layers you have added previously and add a Convolution layer followed by a relu non-linearity and global max pooling (see lecture notes)
 - [x] Modify the code and add an LSTM layer in place of the convolution layer
@@ -67,7 +99,7 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
     Test score: 1.192910744406581  
     Test accuracy: 0.81056  
 
-- [ ] Once you are done, save your changes in github
+- [x] Once you are done, save your changes in github
 	* Go inside your lab directory and do 
       * ``git add -A -v``
       * ``git commit -m <message>``
