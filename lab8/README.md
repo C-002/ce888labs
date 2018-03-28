@@ -7,7 +7,7 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
 - [x] run ``python imdb.py`` and note somewhere the test accuracy score  
 	Test score: 0.6878998550915718  
 	Test accuracy: 0.8366  
-    ![logo](./imdb_py_log.html?raw=true)  
+    ![log](./imdb_py_log.html?raw=true)  
       
       
 - [x] Modify the code to add one more layer of 64 ``relu`` units after the embedding layer record the score (i.e. add a dense followed by an "activation" layer)
