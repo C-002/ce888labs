@@ -11,7 +11,7 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
       
       
 - [x] Modify the code to add one more layer of 64 ``relu`` units after the embedding layer record the score (i.e. add a dense followed by an "activation" layer)
-	```
+	```Python
 	x = inputs
 	x = Embedding(max_features, 128, dropout=0.2)(inputs)
 	x = Flatten()(x)
@@ -54,7 +54,7 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
 - [x] Modify the code and add an LSTM layer in place of the convolution layer
 - [x] (Optional - and quite advanced) use both an LSTM layer and a Convolution layer and merge the results with a Merge layer  
 	
-	```
+	```Python
 	inputs = Input(shape=(maxlen,))
 	x = inputs
 	x = Embedding(max_features, 128, dropout=0.2)(x)
