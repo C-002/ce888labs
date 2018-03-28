@@ -10,7 +10,9 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
     ![log](./imdb_py_log.html?raw=true)  
       
       
-- [x] Modify the code to add one more layer of 64 ``relu`` units after the embedding layer record the score (i.e. add a dense followed by an "activation" layer)
+- [x] Modify the code to add one more layer of 64 ``relu`` units after the embedding layer record the score (i.e. add a dense followed by an "activation" layer)  
+  
+	``Add_layers.ipynb``   
 	* Model Code:  
 	```Python
 	x = inputs
@@ -53,6 +55,8 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
 	  * Test accuracy: 0.79772
 	  
 - [x] Modify the code and add a dropout layer after the relu layer  
+  
+	``Add_layers.ipynb``  
 	* Due to two items was built in one code, same as previous item.  
 	* Model Code:  
 	```Python
@@ -70,12 +74,90 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
 	```
 	  
 	  
-- [x] Remove the layers you have added previously and add a Convolution layer followed by a relu non-linearity and global max pooling (see lecture notes)
-- [x] Modify the code and add an LSTM layer in place of the convolution layer
-- [x] (Optional - and quite advanced) use both an LSTM layer and a Convolution layer and merge the results with a Merge layer  
+- [x] Remove the layers you have added previously and add a Convolution layer followed by a relu non-linearity and global max pooling (see lecture notes)  
+  
+	``cov.ipynb``  
 	* Model Code:  
 	```Python
-	inputs = Input(shape=(maxlen,))
+	x = inputs
+	x = Embedding(max_features, 128, dropout=0.2)(x)
+	x = GlobalMaxPooling1D()(x)
+	x = Dense(1)(x)
+	predictions = Activation("sigmoid")(x)
+	
+	model = Model(input=inputs, output=predictions)
+	model.compile(loss='binary_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])
+	```
+	* Model Summary:  
+	```
+	_________________________________________________________________
+	Layer (type)                 Output Shape              Param #   
+	=================================================================
+	input_32 (InputLayer)        (None, 80)                0         
+	_________________________________________________________________
+	embedding_7 (Embedding)      (None, 80, 128)           2560000   
+	_________________________________________________________________
+	conv1d_28 (Conv1D)           (None, 80, 32)            12320     
+	_________________________________________________________________
+	global_max_pooling1d_14 (Glo (None, 32)                0         
+	_________________________________________________________________
+	dense_45 (Dense)             (None, 1)                 33        
+	_________________________________________________________________
+	activation_23 (Activation)   (None, 1)                 0         
+	=================================================================
+	Total params: 2,572,353
+	Trainable params: 2,572,353
+	Non-trainable params: 0
+	```  
+	* Result:  
+	  * Test score: 0.8385325213527679  
+	  * Test accuracy: 0.83772
+
+- [x] Modify the code and add an LSTM layer in place of the convolution layer  
+  
+	``LSTM.ipynb``  
+	* Model Code:  
+	```Python
+	x = inputs
+	x = Embedding(max_features, 128, dropout=0.2)(x)
+	x = LSTM(32)(x)
+	x = Dense(1)(x)
+	predictions = Activation("sigmoid")(x)
+
+	model = Model(input=inputs, output=predictions)
+	model.compile(loss='binary_crossentropy',
+              optimizer='adam',
+              metrics=['accuracy'])
+	```  
+	* Model Summary:  
+	```
+	_________________________________________________________________
+	Layer (type)                 Output Shape              Param #   
+	=================================================================
+	input_2 (InputLayer)         (None, 80)                0         
+	_________________________________________________________________
+	embedding_2 (Embedding)      (None, 80, 128)           2560000   
+	_________________________________________________________________
+	lstm_2 (LSTM)                (None, 32)                20608     
+	_________________________________________________________________
+	dense_1 (Dense)              (None, 1)                 33        
+	_________________________________________________________________
+	activation_1 (Activation)    (None, 1)                 0         
+	=================================================================
+	Total params: 2,580,641
+	Trainable params: 2,580,641
+	Non-trainable params: 0
+	```  
+	* Result:  
+	  * Test score: 1.0382399596583842  
+	  * Test accuracy: 0.82012  
+- [x] (Optional - and quite advanced) use both an LSTM layer and a Convolution layer and merge the results with a Merge layer  
+  
+	``Merge.ipynb``  
+	* Model Code:  
+	```Python
 	x = inputs
 	x = Embedding(max_features, 128, dropout=0.2)(x)
 	x1 = LSTM(32)(x)
