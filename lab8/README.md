@@ -4,39 +4,41 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
 
 ## Lab Exercises Log 
 
-- [ ] run ``python imdb.py`` and note somewhere the test accuracy score
+- [x] run ``python imdb.py`` and note somewhere the test accuracy score
     
     ![logo](./imdb_py_result.png?raw=true)  
-- [ ] Modify the code to add one more layer of 64 ``relu`` units after the embedding layer record the score (i.e. add a dense followed by an "activation" layer)
-    '''
-    x = inputs
-    x = Embedding(max_features, 128, dropout=0.2)(inputs)
-    x = Flatten()(x)
-    x = Dense(64, activation='relu')(x)
-    x = Dropout(0.25)(x)
-    x = Dense(1)(x)
-    predictions = Activation("sigmoid")(x)
-    '''
-- [ ] Modify the code and add a dropout layer after the relu layer
-- [ ] Remove the layers you have added previously and add a Convolution layer followed by a relu non-linearity and global max pooling (see lecture notes)
-- [ ] Modify the code and add an LSTM layer in place of the convolution layer
-- [ ] (Optional - and quite advanced) use both an LSTM layer and a Convolution layer and merge the results with a Merge layer  
-    '''
-    inputs = Input(shape=(maxlen,))
-    x = inputs
-    x = Embedding(max_features, 128, dropout=0.2)(x)
-    x1 = LSTM(32)(x)
-    x2 = Conv1D(filters=32, kernel_size=3, padding="same")(x)
-    x2 = GlobalMaxPooling1D()(x2)
-    x = Dot(axes=-1)([x1, x2])
-    x = Dense(1)(x)
-    predictions = Activation("sigmoid")(x)
-    
-    model = Model(input=inputs, output=predictions)
-    model.compile(loss='binary_crossentropy',
-              optimizer='adam',
-              metrics=['accuracy'])
-    '''  
+- [x] Modify the code to add one more layer of 64 ``relu`` units after the embedding layer record the score (i.e. add a dense followed by an "activation" layer)
+	```
+	x = inputs
+	x = Embedding(max_features, 128, dropout=0.2)(inputs)
+	x = Flatten()(x)
+	x = Dense(64, activation='relu')(x)
+	x = Dropout(0.25)(x)
+	x = Dense(1)(x)
+	predictions = Activation("sigmoid")(x)
+	```
+- [x] Modify the code and add a dropout layer after the relu layer
+- [x] Remove the layers you have added previously and add a Convolution layer followed by a relu non-linearity and global max pooling (see lecture notes)
+- [x] Modify the code and add an LSTM layer in place of the convolution layer
+- [x] (Optional - and quite advanced) use both an LSTM layer and a Convolution layer and merge the results with a Merge layer  
+	
+	```
+	inputs = Input(shape=(maxlen,))
+	x = inputs
+	x = Embedding(max_features, 128, dropout=0.2)(x)
+	x1 = LSTM(32)(x)
+	x2 = Conv1D(filters=32, kernel_size=3, padding="same")(x)
+	x2 = GlobalMaxPooling1D()(x2)
+	x = Dot(axes=-1)([x1, x2])
+	x = Dense(1)(x)
+	predictions = Activation("sigmoid")(x)
+
+	model = Model(input=inputs, output=predictions)
+	model.compile(loss='binary_crossentropy',
+		optimizer='adam',
+		metrics=['accuracy'])
+	```
+    ```
     __________________________________________________________________________________________________
     Layer (type)                    Output Shape         Param #     Connected to                     
     ==================================================================================================
@@ -61,7 +63,7 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
     Trainable params: 2,592,930
         Non-trainable params: 0
     ____________________________
-    
+    ```
     Test score: 1.192910744406581  
     Test accuracy: 0.81056  
 
