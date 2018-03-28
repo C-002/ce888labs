@@ -11,6 +11,7 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
       
       
 - [x] Modify the code to add one more layer of 64 ``relu`` units after the embedding layer record the score (i.e. add a dense followed by an "activation" layer)
+	* Model Code:  
 	```Python
 	x = inputs
 	x = Embedding(max_features, 128, dropout=0.2)(inputs)
@@ -24,6 +25,7 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
               optimizer='adam',
               metrics=['accuracy'])
 	```
+	* Model Summary:  
 	```
 	_________________________________________________________________
 	Layer (type)                 Output Shape              Param #   
@@ -45,15 +47,33 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
 	Total params: 3,215,489
 	Trainable params: 3,215,489
 	Non-trainable params: 0
-	```  
-	Test score: 0.18518264630556105  
-	Test accuracy: 0.79772
+	``` 
+	* Result:  
+	  * Test score: 0.18518264630556105  
+	  * Test accuracy: 0.79772
 	  
-- [x] Modify the code and add a dropout layer after the relu layer
+- [x] Modify the code and add a dropout layer after the relu layer  
+	* Due to two items was built in one code, same as previous item.  
+	* Model Code:  
+	```Python
+	x = inputs
+	x = Embedding(max_features, 128, dropout=0.2)(inputs)
+	x = Flatten()(x)
+	x = Dense(64, activation='relu')(x)
+	x = Dropout(0.25)(x)
+	x = Dense(1)(x)
+	predictions = Activation("sigmoid")(x)
+	model = Model(input=inputs, output=predictions)
+	model.compile(loss='mse',
+              optimizer='adam',
+              metrics=['accuracy'])
+	```
+	  
+	  
 - [x] Remove the layers you have added previously and add a Convolution layer followed by a relu non-linearity and global max pooling (see lecture notes)
 - [x] Modify the code and add an LSTM layer in place of the convolution layer
 - [x] (Optional - and quite advanced) use both an LSTM layer and a Convolution layer and merge the results with a Merge layer  
-	
+	* Model Code:  
 	```Python
 	inputs = Input(shape=(maxlen,))
 	x = inputs
@@ -69,7 +89,8 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
 	model.compile(loss='binary_crossentropy',
 		optimizer='adam',
 		metrics=['accuracy'])
-	```
+	```  
+	* Model Summary:  
     ```
     __________________________________________________________________________________________________
     Layer (type)                    Output Shape         Param #     Connected to                     
@@ -96,8 +117,9 @@ For this lab, we will train a network to do sentiment analysis on IMDB data sets
         Non-trainable params: 0
     ____________________________
     ```
-    Test score: 1.192910744406581  
-    Test accuracy: 0.81056  
+	* Result:  
+      	  * Test score: 1.192910744406581  
+      	  * Test accuracy: 0.81056  
 
 - [x] Once you are done, save your changes in github
 	* Go inside your lab directory and do 
